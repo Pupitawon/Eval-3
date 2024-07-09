@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estimación de Calorías Quemadas en Ejercicio</title>
+    <link href="Assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+<body>
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 text-primary">Estimación de Calorías Quemadas</h1>
+            <p class="lead text-secondary">Calcule cuántas calorías quema al caminar o correr.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">¿Qué es la estimación de calorías quemadas en ejercicio?</h5>
+                        <p class="card-text">Es un cálculo que nos permite estimar cuántas calorías quema una persona al realizar actividad física, en este caso, caminar o correr.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">¿Para qué sirve?</h5>
+                        <p class="card-text">
+                            • Ayuda a las personas a entender el gasto energético de sus actividades.<br>
+                            • Es útil para planificar rutinas de ejercicio y dietas.<br>
+                            • Permite comparar la intensidad de diferentes actividades.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <form id="caloriesForm" class="col-md-6 mx-auto shadow p-4 bg-white rounded">
+                <div class="mb-3">
+                    <label for="weight" class="form-label">Peso (kg):</label>
+                    <input type="number" class="form-control" id="weight" placeholder="Ej: 70" required>
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label">Tiempo (minutos):</label>
+                    <input type="number" class="form-control" id="time" placeholder="Ej: 30" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Actividad:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="activity" id="walk" value="3.5" checked>
+                        <label class="form-check-label" for="walk">Caminar</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="activity" id="run" value="8.0">
+                        <label class="form-check-label" for="run">Correr</label>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100" type="submit">Calcular Calorías</button>
+            </form>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="alert alert-primary text-center" id="result" role="alert">
+                    Esperando el cálculo ...
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/js/script.js"></script>
+</body>
+</html>
